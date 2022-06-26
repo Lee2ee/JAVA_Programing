@@ -238,16 +238,16 @@ public class POS_pos extends JPanel implements ActionListener {
 
 	// JTable에 출력된 모든 데이터의 상품명, 재고량, 가격을 이용하여 DB 데이터 업데이트
 	public void stockUpdate(DefaultTableModel model) throws SQLException {
-		Item item = null;
-		boolean result = false;
-		
+		String name = null;
+		String stock = null;
+		String total = null;
 		for (int i = 0; i < model.getRowCount(); i++) {
-			item.setItem_name(String.valueOf(model.getValueAt(i, 0)));
+			name = (String) model.getValueAt(i, 0);
+			stock = (String) model.getValueAt(i, 1);
 		}
-		for (int i = 0; i < model.getRowCount(); i++) {
-			item.setItem_stock(Integer.parseInt((String) model.getValueAt(i, 1)));
-		}
+		total = dao.getStock(name);
 		
-		result = ItemDAO.getInstance().updateItem(item);
+		ItemDAO.getInstance().updateStock(total, stock, name);
+
 	}
 }

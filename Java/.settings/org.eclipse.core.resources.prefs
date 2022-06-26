@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/DBConnect.java=EUC-KR
+encoding//src/Item.java=EUC-KR
+encoding//src/ItemDAO.java=EUC-KR
+encoding//src/Main_POS.java=EUC-KR
+encoding//src/POS_StockManagement.java=EUC-KR
+encoding//src/POS_pos.java=EUC-KR
+encoding//src/StockWindow.java=EUC-KR
+encoding//src/Test.java=MS949
+encoding/<project>=MS949
